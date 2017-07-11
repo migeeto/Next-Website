@@ -51,8 +51,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
   
-<body>
-  <nav class="navbar navbar-default">
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -60,19 +60,19 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span> 
       </button>
-      <a class="navbar-brand" href="#">Home</a>
+      <a class="navbar-brand" href="#home">Home</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">About Me</a></li>
-        <li><a href="#">Get in touch</a></li>
+        <li><a href="/work">My Work</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="/contact">Get in touch</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-  <div class="container-fluid bg-1 text-center">
+  <div class="container-fluid bg-1 text-center" id="home">
     <h1>Mackenzie Bearse</h1>
     <img src="http://placehold.it/300/09f.png/fff" class="img-circle" alt="A picture of me.">
     <h2>This site is still under construction. If you'd like to reach out to me, send me an email at mcbearse@gmail.com</h2>
@@ -99,12 +99,12 @@
   </div>
     <a href="#" class="btn btn-default btn-lg" margin-top="10px">Older Work</a>
   </div>
-  <div class="container-fluid bg-3 text-center">
+  <div class="container-fluid bg-3 text-center" id="about">
     <h2>About me</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
   </div>
 </body>
   <footer class="container-fluid bg-4 text-center"> 
-    <p>&copy; Mac Bearse </p>
+    <p>&copy; Mackenzie Bearse </p>
   </footer>
 </html>
