@@ -1,19 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<title>Page Title</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-    font-family: Arial, Helvetica, sans-serif;
-}
-</style>
-</head>
-<body>
-
-<h1>Coming Soon</h1>
-<p></p>
-
-</body>
+  <head>
+    <title>Page Title</Title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Georgia, Helvetica, sans-serif;
+        margin: 0;
+      }
+      
+      /*Style the header*/
+      .header{
+        padding: 80px;
+        text-align: center;
+        background: #202b3d;
+        color: white;
+      }
+      
+      /*Increase the font size of the h1 element*/
+      .header h1{
+       font-size: 40px; 
+      }
+      
+      /*Style the top Nav bar*/
+      .navbar{
+        overflow: hidden; /*Hides overflow*/
+        background-color: #333; /*Dark background color*/
+      }
+      
+      /*Style the navigation bar links*/
+      .navbar a {
+        float: left; /*Make sure the links stay side by side*/
+        display: block; /*Change the display to block for responsive reasons*/
+        color: white; /*white text color*/
+        text-align: center; /*centers the text*/
+        padding: 14px 20px; /*adds some padding*/
+        text-decoration: none; /*Removes underline*/
+      }
+      
+      /*Right aligned link*/
+      .navbar a.right{
+        float: right; /*floats a link to the right*/
+      }
+      
+      /*Change color on mouse hover over*/
+      .navbar a:hover{
+        background-color: #ddd; /* Grey background color*/
+        color: black; /*Black text*/
+      }
+      
+      /*Column container*/
+      .row{
+        display: flex;
+        flex-wrap: wrap;
+      }
+      
+      /*Create two unequal columns that sit next to each other*/
+      /*Sidebar/left column*/
+      .side {
+        flex: 30%; /*set the width of the sidebar*/
+        background-color: #f1f1f1; /*grey background color*/
+        padding: 20px; /*some padding*/
+      }
+      
+      /*Main column*/
+      .main {
+        flex: 70%; /*Set width of main content*/
+        background-color: white; /*White background color*/
+        padding: 20px; /*Some padding*/
+      }
+      
+      /*Fake image, just for layout purposes*/
+      .fakeimg {
+        background-color: #aaa;
+        width: 100%;
+        padding: 20px;
+      }
+      
+      /*Responsive layout: when the screen is less than 700px wide, make the 2
+      columns stack on top of each other instead of next to each other*/
+      @media screen and (max-width:700px) {
+        .row {
+          flex-direction: column;
+        }
+      }
+      
+      /*Responsive layout: when the screen is less than 400px wide, make the navigation
+      links stack on top of each other instead of next to each other*/
+      @media screen and (max-width:400px) {
+        .navbar a {
+          float:none;
+          width:100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div class="header">
+      <h1>Mac Bearse</h1>
+      <p>Programmer. Game designer. Professional Nerd.</p>
+    </div>
+    <div class="navbar">
+      <a href="#">Home</a>
+      <a href="#">About Me</a>
+      <a href="#">Projects</a>
+      <a href="#" class="right">Contact Me</a>
+    </div>
+    <div class="row">
+      <div class="side">
+        <h2>About me</h2>
+        <h5>Photo of me</h5>
+        <img class="myPics" src="https://github.com/migeeto/Old-Website-Code/blob/master/images/img_me.jpg" style="width:100%;height 200px">
+        <p>I am currently a junior at Columbia College Chicago, getting a Bachelor's in Video Game Programming. I'm also a hobbyist board game designer and poet.</p>
+        
+      </div>
+      <div class="main">
+        <h2>TITLE HEADING</h2>
+        <h5>Title description, Dec 7, 2017</h5>
+        <div class="fakeimg" style="height:200px;">Image</div>
+        <p>Some text..</p>
+        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        <br>
+        <h2>TITLE HEADING</h2>
+        <h5>Title description, Sep 2, 2017</h5>
+        <div class="fakeimg" style="height:200px;">Image</div>
+        <p>Some text..</p>
+        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      </div>
+    </div>
+    
+  </body>
 </html>
