@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Mac Bearse</Title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Georgia, Helvetica, sans-serif;
+        margin: 0;
+      }
+      
+      /*Style the header*/
+      .header{
+        padding: 80px;
+        text-align: center;
+        background: #202b3d; /*Dark blue header background*/
+        color: white;
+      }
+      
+      /*Increase the font size of the h1 element*/
+      .header h1{
+       font-size: 40px; 
+      }
+      
+      /*Style the top Nav bar*/
+      .navbar{
+        overflow: hidden; /*Hides overflow*/
+        background-color: #333; /*Dark background color*/
+      }
+      
+      /*Style the navigation bar links*/
+      .navbar a {
+        float: left; /*Make sure the links stay side by side*/
+        display: block; /*Change the display to block for responsive reasons*/
+        color: white; /*white text color*/
+        text-align: center; /*centers the text*/
+        padding: 14px 20px; /*adds some padding*/
+        text-decoration: none; /*Removes underline*/
+      }
+      
+      /*Right aligned link*/
+      .navbar a.right{
+        float: right; /*floats a link to the right*/
+      }
+      
+      /*Change color on mouse hover over*/
+      .navbar a:hover{
+        background-color: #ddd; /* Grey background color*/
+        color: black; /*Black text*/
+      }
+      
+      /*Column container*/
+      .row{
+        display: flex;
+        flex-wrap: wrap;
+      }
+      
+      /*Create two unequal columns that sit next to each other*/
+      /*Sidebar/left column*/
+      .side {
+        flex: 30%; /*set the width of the sidebar*/
+        background-color: #f1f1f1; /*grey background color*/
+        padding: 20px; /*some padding*/
+      }
+      
+      /*Main column*/
+      .main {
+        flex: 70%; /*Set width of main content*/
+        background-color: white; /*White background color*/
+        padding: 20px; /*Some padding*/
+      }
+      
+      /*Fake image, just for layout purposes*/
+      .fakeimg {
+        background-color: #aaa;
+        width: 100%;
+        padding: 20px;
+      }
+      
+      /*Actual picture settings*/
+      .mypics {
+        background-color: #aaa;
+        width: 100%;
+        padding: 20px;
+      }
+      
+      /*Responsive layout: when the screen is less than 700px wide, make the 2
+      columns stack on top of each other instead of next to each other*/
+      @media screen and (max-width:700px) {
+        .row {
+          flex-direction: column;
+        }
+      }
+      
+      /*Responsive layout: when the screen is less than 400px wide, make the navigation
+      links stack on top of each other instead of next to each other*/
+      @media screen and (max-width:400px) {
+        .navbar a {
+          float:none;
+          width:100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div class="header">
+      <h1>Mac Bearse</h1>
+      <p>Programmer. Game designer. Professional Nerd.</p>
+    </div>
+    <div class="navbar">
+      <a href="#">Home</a>
+      <a href="#about">About Me</a>
+      <a href="#">Projects</a>
+      <a href="#" class="right">Contact Me</a>
+    </div>
+    <div class="row">
+      <div class="side">
+        <h2>About me</h2>
+        <img class="myPics" src="images/img_me.jpg" style="width:100%;height 200px">
+        <p>I am currently a junior at Columbia College Chicago, getting a Bachelor's in Video Game Programming. I'm also a hobbyist board game designer and poet.</p>
+        <p>I have experience working in C#, C++, HTML, CSS, GML, and rudimentary experience with Python, Java, and Javascript. I'm a fast learner, work fast under pressure, and excel at collaborating with others to come up with ideas and solve problems.  
+        
+      </div>
+      <div class="main">
+        <h2>About Me</h2>
+        <div class="fakeimg" style="height:200px;width:200px">200x200</div>
+        <p>Born in Monterey, California, I traveled all around the country (and to a couple of other ones) while I was young. I went to high school in Fairfax Virginia, where I first discovered my love for programming. Every chance I got to write code, I took. Now I'm getting a programming degree in college in Chicago. The projects I've worked on in the past have been pretty basic, mostly text adventures (in addition to design work on other, more finished games). However, I take a great deal of pride in making sure that my games are interesting, even if they're more simple. My current projects include becoming more proficient with unity and creating a simple 3d game.</p>
+      </div>
+    </div>
+    <div class="footer">
+      <h6>footer</h6>
+    </div>
+  </body>
+</html>
